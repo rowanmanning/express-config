@@ -1,0 +1,63 @@
+{
+  "name": "@rowanmanning/express-config",
+  "version": "0.0.0",
+  "description": "A library to configure Express in my preferred way",
+  "keywords": [
+    "express"
+  ],
+  "author": "Rowan Manning (https://rowanmanning.com/)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rowanmanning/express-config.git"
+  },
+  "homepage": "https://github.com/rowanmanning/express-config",
+  "bugs": "https://github.com/rowanmanning/express-config/issues",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14",
+    "npm": ">=7"
+  },
+  "scripts": {
+    "verify": "eslint .",
+    "test": "npm run test:coverage",
+    "test:unit": "mocha 'test/unit/**/*.test.js'",
+    "test:coverage": "nyc npm run test:unit",
+    "project:verify": "npx --yes @rowanmanning/validate-project --type git node-library",
+    "project:fix": "npx --yes @rowanmanning/validate-project --type git node-library --fix"
+  },
+  "dependencies": {
+    "@rowanmanning/not-found": "^2.0.4",
+    "@rowanmanning/render-error-page": "^2.2.0",
+    "express": "^4.17.3",
+    "express-http-to-https": "^1.1.4",
+    "express-preact-views": "^1.1.0",
+    "express-session": "^1.17.2",
+    "helmet": "^5.0.2",
+    "nanoid": "^3.3.1",
+    "pino": "^7.8.0",
+    "pino-http": "^6.6.0"
+  },
+  "devDependencies": {
+    "@rowanmanning/eslint-config": "^3.3.0",
+    "chai": "^4.3.6",
+    "eslint": "^8.10.0",
+    "mocha": "^9.2.1",
+    "nyc": "^15.1.0",
+    "testdouble": "^3.16.4"
+  },
+  "main": "lib/express-config.js",
+  "nyc": {
+    "eager": true,
+    "reporter": [
+      "html",
+      "text"
+    ]
+  },
+  "mocha": {
+    "timeout": 10000
+  },
+  "volta": {
+    "node": "14.19.0",
+    "npm": "8.5.3"
+  }
+}

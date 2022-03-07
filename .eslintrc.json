@@ -1,0 +1,6 @@
+{
+	"extends": [
+		"@rowanmanning/eslint-config",
+		"@rowanmanning/eslint-config/jsx"
+	]
+}

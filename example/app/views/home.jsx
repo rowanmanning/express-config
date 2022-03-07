@@ -1,0 +1,9 @@
+'use strict';
+
+const {h} = require('preact');
+
+module.exports = function HomeView() {
+	return (
+		<h1>Hello World!</h1>
+	);
+};
