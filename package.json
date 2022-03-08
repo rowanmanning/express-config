@@ -54,7 +54,7 @@
     ]
   },
   "mocha": {
-    "timeout": 10000
+    "timeout": 20000
   },
   "volta": {
     "node": "14.19.0",
