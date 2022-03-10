@@ -61,6 +61,8 @@ This is a library which sets a lot of Express configurations and generally gets 
 
   * In-memory [sessions](https://github.com/expressjs/session#readme) set up by default, with the option to configure other [session stores](https://github.com/expressjs/session#compatible-session-stores)
 
+  * [Flash messages](https://github.com/jaredhanson/connect-flash#readme) for temporary session data
+
   * Static serving middleware set up to serve from the `public` directory
 
   * Automatically render an customisable HTML [error page](https://github.com/rowanmanning/render-error-page#readme)

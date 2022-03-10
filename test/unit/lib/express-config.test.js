@@ -8,6 +8,7 @@ describe('lib/express-config', () => {
 	let express;
 	let expressPreactViews;
 	let expressSession;
+	let flash;
 	let helmet;
 	let http;
 	let nanoid;
@@ -23,6 +24,7 @@ describe('lib/express-config', () => {
 		express = td.replace('express', require('../mock/npm/express.mock').initMock());
 		expressPreactViews = td.replace('express-preact-views', require('../mock/npm/express-preact-views.mock').initMock());
 		expressSession = td.replace('express-session', require('../mock/npm/express-session.mock').initMock());
+		flash = td.replace('connect-flash', require('../mock/npm/connect-flash.mock').initMock());
 		helmet = td.replace('helmet', require('../mock/npm/helmet.mock').initMock()).default;
 		http = td.replace('http', require('../mock/node/http.mock').initMock());
 		nanoid = td.replace('nanoid', require('../mock/npm/nanoid.mock').initMock()).nanoid;
@@ -162,6 +164,10 @@ describe('lib/express-config', () => {
 			td.verify(expressSession('mock-session-options'), {times: 1});
 		});
 
+		it('creates and configures connect-flash middleware', () => {
+			td.verify(flash(), {times: 1});
+		});
+
 		it('creates and configures pino-http middleware with the app pino logger', () => {
 			td.verify(Object.assign({}, defaultedOptions.pinoHttp, {logger: pino.mockLogger}), {times: 1});
 			td.verify(pinoHttp('mock-pino-http-options'), {times: 1});
@@ -216,6 +222,10 @@ describe('lib/express-config', () => {
 
 			it('contains express-session middleware', () => {
 				assert.include(app.preRoute, expressSession.mockMiddleware);
+			});
+
+			it('contains connect-flash middleware', () => {
+				assert.include(app.preRoute, flash.mockMiddleware);
 			});
 
 			it('contains pino-http middleware', () => {
@@ -429,6 +439,10 @@ describe('lib/express-config', () => {
 
 				it('does not contain express-session middleware', () => {
 					assert.notInclude(app.postRoute, expressSession.mockMiddleware);
+				});
+
+				it('contains connect-flash middleware', () => {
+					assert.notInclude(app.preRoute, flash.mockMiddleware);
 				});
 
 			});
