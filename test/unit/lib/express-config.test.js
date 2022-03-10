@@ -67,6 +67,7 @@ describe('lib/express-config', () => {
 				session: {
 					isMockSessionOptions: true
 				},
+				sessionName: 'mock-session-name',
 				sessionSecret: 'mock-session-secret',
 				sessionStore: 'mock-session-storage',
 				static: 'mock-static-options',
@@ -80,6 +81,7 @@ describe('lib/express-config', () => {
 			td.when(Object.assign({}, configureExpress.defaultOptions, options)).thenReturn(defaultedOptions);
 			td.when(Object.assign({}, defaultedOptions.pinoHttp, {logger: pino.mockLogger})).thenReturn('mock-pino-http-options');
 			td.when(Object.assign({}, defaultedOptions.session, {
+				name: 'mock-session-name',
 				secret: 'mock-session-secret',
 				store: 'mock-session-storage'
 			})).thenReturn('mock-session-options');
@@ -153,6 +155,7 @@ describe('lib/express-config', () => {
 
 		it('creates and configures express-session middleware', () => {
 			td.verify(Object.assign({}, defaultedOptions.session, {
+				name: 'mock-session-name',
 				secret: 'mock-session-secret',
 				store: 'mock-session-storage'
 			}), {times: 1});
@@ -437,6 +440,7 @@ describe('lib/express-config', () => {
 			beforeEach(() => {
 				delete defaultedOptions.sessionSecret;
 				td.when(Object.assign({}, defaultedOptions.session, {
+					name: 'mock-session-name',
 					secret: 'mock-nanoid-session-secret',
 					store: 'mock-session-storage'
 				})).thenReturn('mock-session-options-with-nanoid');
@@ -447,6 +451,7 @@ describe('lib/express-config', () => {
 			it('creates and configures express-session middleware with a nanoid as a secret', () => {
 				td.verify(nanoid(), {times: 1});
 				td.verify(Object.assign({}, defaultedOptions.session, {
+					name: 'mock-session-name',
 					secret: 'mock-nanoid-session-secret',
 					store: 'mock-session-storage'
 				}), {times: 1});
@@ -742,6 +747,14 @@ describe('lib/express-config', () => {
 					resave: false,
 					saveUninitialized: false
 				});
+			});
+
+		});
+
+		describe('.sessionName', () => {
+
+			it('contains a default values for Express Session name', () => {
+				assert.strictEqual(configureExpress.defaultOptions.sessionName, 'Session');
 			});
 
 		});

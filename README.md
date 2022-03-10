@@ -30,6 +30,7 @@ const app = configureExpress(express());
       * [`publicPath`](#publicpath)
       * [`redirectToHttps`](#redirecttohttps)
       * [`session`](#session)
+      * [`sessionName`](#sessionname)
       * [`sessionSecret`](#sessionsecret)
       * [`sessionStore`](#sessionstore)
       * [`static`](#static)
@@ -243,9 +244,13 @@ Use an object to change configurations or set to `false` to disable the express-
 
 Configuration options to pass into [express-session](https://github.com/expressjs/session#readme).
 
-The `sessionSecret` and `sessionStore` configurations should be used before this, as their values will override any that are passed in the `session` option.
+The `sessionName`, `sessionSecret`, and `sessionStore` configurations should be used before this, as their values will override any that are passed in the `session` option.
 
 Use an object to change configurations or set to `false` to disable the express-session middleware entirely.
+
+#### `sessionName`
+
+The name of the session cookie. [see documentation](https://github.com/expressjs/session#name).
 
 #### `sessionSecret`
 
