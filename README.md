@@ -272,6 +272,10 @@ Configuration options to pass into [express.static](https://expressjs.com/en/api
 
 Use an object to change configurations or set to `false` to disable the express.static middleware entirely
 
+#### `trustProxy`
+
+Configuration option for the [express `trust proxy` setting](https://expressjs.com/en/guide/behind-proxies.html). Defaults to `true`.
+
 #### `urlencodedBody`
 
 Configuration options to pass into [express.urlencoded](https://expressjs.com/en/api.html#express.urlencoded).

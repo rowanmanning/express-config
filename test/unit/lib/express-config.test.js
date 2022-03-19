@@ -61,6 +61,7 @@ describe('lib/express-config', () => {
 				pinoHttp: {
 					isMockPinoHttpOptions: true
 				},
+				publicPath: 'mock-public-path',
 				redirectToHttps: {
 					ignoreHosts: 'mock-ignore-hosts',
 					ignoreRoutes: 'mock-ignore-routes',
@@ -73,7 +74,7 @@ describe('lib/express-config', () => {
 				sessionSecret: 'mock-session-secret',
 				sessionStore: 'mock-session-storage',
 				static: 'mock-static-options',
-				publicPath: 'mock-public-path',
+				trustProxy: 'mock-trust-proxy',
 				urlencodedBody: 'mock-parse-body-urlencoded-options',
 				viewPath: 'mock-view-path'
 			};
@@ -109,6 +110,10 @@ describe('lib/express-config', () => {
 
 		it('disables the x-powered-by header', () => {
 			td.verify(express.mockApp.disable('x-powered-by'), {times: 1});
+		});
+
+		it('sets the trust proxy setting', () => {
+			td.verify(express.mockApp.set('trust proxy', 'mock-trust-proxy'), {times: 1});
 		});
 
 		it('sets the view path to `options.viewPath`', () => {
@@ -740,6 +745,14 @@ describe('lib/express-config', () => {
 
 		});
 
+		describe('.publicPath', () => {
+
+			it('contains default values for the public path', () => {
+				assert.deepEqual(configureExpress.defaultOptions.publicPath, `${process.cwd()}/public`);
+			});
+
+		});
+
 		describe('.redirectToHttps', () => {
 
 			it('contains default values for Redirect to HTTPS', () => {
@@ -783,10 +796,10 @@ describe('lib/express-config', () => {
 
 		});
 
-		describe('.publicPath', () => {
+		describe('.trustProxy', () => {
 
-			it('contains default values for the public path', () => {
-				assert.deepEqual(configureExpress.defaultOptions.publicPath, `${process.cwd()}/public`);
+			it('contains default values for Express trustProxy', () => {
+				assert.strictEqual(configureExpress.defaultOptions.trustProxy, true);
 			});
 
 		});
