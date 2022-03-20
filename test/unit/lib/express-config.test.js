@@ -152,6 +152,10 @@ describe('lib/express-config', () => {
 			), {times: 1});
 		});
 
+		it('creates and configures express static middleware', () => {
+			td.verify(express.static('mock-public-path', 'mock-static-options'), {times: 1});
+		});
+
 		it('creates and configures express body JSON middleware', () => {
 			td.verify(express.json('mock-parse-body-json-options'), {times: 1});
 		});
@@ -176,10 +180,6 @@ describe('lib/express-config', () => {
 		it('creates and configures pino-http middleware with the app pino logger', () => {
 			td.verify(Object.assign({}, defaultedOptions.pinoHttp, {logger: pino.mockLogger}), {times: 1});
 			td.verify(pinoHttp('mock-pino-http-options'), {times: 1});
-		});
-
-		it('creates and configures express static middleware', () => {
-			td.verify(express.static('mock-public-path', 'mock-static-options'), {times: 1});
 		});
 
 		it('creates and configures not-found middleware', () => {
@@ -217,6 +217,10 @@ describe('lib/express-config', () => {
 				assert.include(app.preRoute, redirectToHTTPS.mockMiddleware);
 			});
 
+			it('contains express.static middleware', () => {
+				assert.include(app.preRoute, express.static.mockMiddleware);
+			});
+
 			it('contains express.json middleware', () => {
 				assert.include(app.preRoute, express.json.mockMiddleware);
 			});
@@ -244,10 +248,6 @@ describe('lib/express-config', () => {
 			it('is an array of created middleware functions', () => {
 				assert.isArray(app.postRoute);
 				assert.isTrue(app.postRoute.every(middleware => typeof middleware === 'function'));
-			});
-
-			it('contains express.static middleware', () => {
-				assert.include(app.postRoute, express.static.mockMiddleware);
 			});
 
 			it('contains not-found middleware', () => {
@@ -382,6 +382,23 @@ describe('lib/express-config', () => {
 
 		});
 
+		describe('when `options.static` is `false`', () => {
+
+			beforeEach(() => {
+				defaultedOptions.static = false;
+				app = configureExpress(express.mockApp, options);
+			});
+
+			describe('app.preRoute', () => {
+
+				it('does not contain express.static middleware', () => {
+					assert.notInclude(app.preRoute, express.static.mockMiddleware);
+				});
+
+			});
+
+		});
+
 		describe('when `options.jsonBody` is `false`', () => {
 
 			beforeEach(() => {
@@ -475,23 +492,6 @@ describe('lib/express-config', () => {
 					store: 'mock-session-storage'
 				}), {times: 1});
 				td.verify(expressSession('mock-session-options-with-nanoid'), {times: 1});
-			});
-
-		});
-
-		describe('when `options.static` is `false`', () => {
-
-			beforeEach(() => {
-				defaultedOptions.static = false;
-				app = configureExpress(express.mockApp, options);
-			});
-
-			describe('app.postRoute', () => {
-
-				it('does not contain express.static middleware', () => {
-					assert.notInclude(app.postRoute, express.static.mockMiddleware);
-				});
-
 			});
 
 		});
