@@ -768,6 +768,7 @@ describe('lib/express-config', () => {
 			it('contains default values for Express Session', () => {
 				assert.deepEqual(configureExpress.defaultOptions.session, {
 					cookie: {
+						maxAge: 604800000,
 						sameSite: 'strict',
 						secure: false
 					},
