@@ -27,7 +27,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@rowanmanning/not-found": "^2.0.4",
+    "@rowanmanning/not-found": "^3.0.2",
     "@rowanmanning/render-error-page": "^2.2.0",
     "connect-flash": "^0.1.1",
     "express": "^4.17.3",
