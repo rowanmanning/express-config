@@ -1,5 +1,13 @@
 # Changelog
 
+### [2.2.2](https://github.com/rowanmanning/express-config/compare/v2.2.1...v2.2.2) (2022-05-04)
+
+
+### Miscellaneous
+
+* bump @rowanmanning/render-error-page from 2.3.0 to 3.0.0 ([8569b67](https://github.com/rowanmanning/express-config/commit/8569b6731f4c9e8d3e6bebb5cf6094a6914e40d7))
+* bump nanoid from 3.3.3 to 3.3.4 ([19f9504](https://github.com/rowanmanning/express-config/commit/19f95041a40335c829614bb558d40157641b0afe))
+
 ### [2.2.1](https://github.com/rowanmanning/express-config/compare/v2.2.0...v2.2.1) (2022-05-02)
 
 
