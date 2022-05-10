@@ -1,5 +1,13 @@
 # Changelog
 
+### [2.2.3](https://github.com/rowanmanning/express-config/compare/v2.2.2...v2.2.3) (2022-05-10)
+
+
+### Miscellaneous
+
+* bump eslint from 8.14.0 to 8.15.0 ([9950344](https://github.com/rowanmanning/express-config/commit/995034460bdb355e5bed938a68a3410f9fa755c1))
+* bump husky from 7.0.4 to 8.0.1 ([#35](https://github.com/rowanmanning/express-config/issues/35)) ([be6cd05](https://github.com/rowanmanning/express-config/commit/be6cd05b890809b1ca2218f8042e0dba42e8048b))
+
 ### [2.2.2](https://github.com/rowanmanning/express-config/compare/v2.2.1...v2.2.2) (2022-05-04)
 
 
