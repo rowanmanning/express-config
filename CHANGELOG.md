@@ -1,5 +1,25 @@
 # Changelog
 
+## [2.3.0](https://github.com/rowanmanning/express-config/compare/v2.2.2...v2.3.0) (2022-05-20)
+
+
+### Features
+
+* bump helmet from 5.0.2 to 5.1.0 ([a60e806](https://github.com/rowanmanning/express-config/commit/a60e806783c942bc2323133aca2436559f46df79))
+
+
+### Bug Fixes
+
+* bump express-session from 1.17.2 to 1.17.3 ([b99c552](https://github.com/rowanmanning/express-config/commit/b99c5522f483f6558eea8ccba786fed994e52631))
+
+
+### Miscellaneous
+
+* bump @commitlint/cli from 16.2.4 to 17.0.0 ([c844ca2](https://github.com/rowanmanning/express-config/commit/c844ca203af652bfc21be223fcb0c8d3b7979f94))
+* bump @commitlint/config-conventional from 16.2.4 to 17.0.0 ([f3020f0](https://github.com/rowanmanning/express-config/commit/f3020f0e05229a82e01fda725662500312e5ade1))
+* bump eslint from 8.14.0 to 8.15.0 ([9950344](https://github.com/rowanmanning/express-config/commit/995034460bdb355e5bed938a68a3410f9fa755c1))
+* bump husky from 7.0.4 to 8.0.1 ([#35](https://github.com/rowanmanning/express-config/issues/35)) ([be6cd05](https://github.com/rowanmanning/express-config/commit/be6cd05b890809b1ca2218f8042e0dba42e8048b))
+
 ### [2.2.2](https://github.com/rowanmanning/express-config/compare/v2.2.1...v2.2.2) (2022-05-04)
 
 
