@@ -718,12 +718,44 @@ describe('lib/express-config', () => {
 				assert.isFunction(configureExpress.defaultOptions.pinoHttp.genReqId);
 			});
 
-			describe('.genReqId()', () => {
+			describe('.genReqId(request)', () => {
+				let request;
+				let returnValue;
 
-				it('generates and returns a nanoid', () => {
-					const returnValue = configureExpress.defaultOptions.pinoHttp.genReqId();
-					td.verify(nanoid(10), {times: 1});
-					assert.strictEqual(returnValue, 'mock-nanoid');
+				beforeEach(() => {
+					request = {
+						headers: {}
+					};
+				});
+
+				describe('when no `X-Request-ID` header is present', () => {
+
+					beforeEach(() => {
+						returnValue = configureExpress.defaultOptions.pinoHttp.genReqId(request);
+					});
+
+					it('generates and returns a nanoid', () => {
+						td.verify(nanoid(10), {times: 1});
+						assert.strictEqual(returnValue, 'mock-nanoid');
+					});
+
+				});
+
+				describe('when an `X-Request-ID` header is present', () => {
+
+					beforeEach(() => {
+						request.headers['x-request-id'] = 'mock-header-id';
+						returnValue = configureExpress.defaultOptions.pinoHttp.genReqId(request);
+					});
+
+					it('does not generate a nanoid', () => {
+						td.verify(nanoid(10), {times: 0});
+					});
+
+					it('returns the header value', () => {
+						assert.strictEqual(returnValue, 'mock-header-id');
+					});
+
 				});
 
 			});
