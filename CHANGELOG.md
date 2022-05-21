@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.4.0](https://github.com/rowanmanning/express-config/compare/v2.3.0...v2.4.0) (2022-05-21)
+
+
+### Features
+
+* use the x-request-id header when present ([d18eea2](https://github.com/rowanmanning/express-config/commit/d18eea29c01770e101314c2cc0b26ac75a927b8f))
+
 ## [2.3.0](https://github.com/rowanmanning/express-config/compare/v2.2.2...v2.3.0) (2022-05-20)
 
 
