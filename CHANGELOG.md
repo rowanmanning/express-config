@@ -1,5 +1,21 @@
 # Changelog
 
+### [2.4.1](https://github.com/rowanmanning/express-config/compare/v2.4.0...v2.4.1) (2022-05-26)
+
+
+### Bug Fixes
+
+* bump @rowanmanning/not-found from 3.0.2 to 3.0.3 ([95f147f](https://github.com/rowanmanning/express-config/commit/95f147fd24e544f681f6ddcb45db77ed8cef6256))
+* bump @rowanmanning/render-error-page from 3.0.0 to 3.0.1 ([c6d77cc](https://github.com/rowanmanning/express-config/commit/c6d77cc9dd7dbf70031f9ae86931fe8fc5e18382))
+
+
+### Miscellaneous
+
+* bump @commitlint/cli from 17.0.0 to 17.0.1 ([187d440](https://github.com/rowanmanning/express-config/commit/187d440addeadb70221b3ba00f0d75990c097057))
+* bump @rowanmanning/eslint-config from 3.4.0 to 3.5.0 ([e682a25](https://github.com/rowanmanning/express-config/commit/e682a253d8deb9c0d4a0961a2632c20f31611eda))
+* bump eslint from 8.15.0 to 8.16.0 ([7e8b1fd](https://github.com/rowanmanning/express-config/commit/7e8b1fdb43690f1f47494f0745f7f429718e67c6))
+* bump pino-http from 7.0.0 to 7.1.0 ([935def0](https://github.com/rowanmanning/express-config/commit/935def02a695b586ee82917a69a0f6c5cc7bf685))
+
 ## [2.4.0](https://github.com/rowanmanning/express-config/compare/v2.3.0...v2.4.0) (2022-05-21)
 
 
