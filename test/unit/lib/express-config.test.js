@@ -29,8 +29,8 @@ describe('lib/express-config', () => {
 		http = td.replace('http', require('../mock/node/http.mock').initMock());
 		nanoid = td.replace('nanoid', require('../mock/npm/nanoid.mock').initMock()).nanoid;
 		notFound = td.replace('@rowanmanning/not-found', require('../mock/npm/@rowanmanning/not-found.mock').initMock());
-		pino = td.replace('pino', require('../mock/npm/pino.mock').initMock());
-		pinoHttp = td.replace('pino-http', require('../mock/npm/pino-http.mock').initMock());
+		pino = td.replace('pino', require('../mock/npm/pino.mock').initMock()).default;
+		pinoHttp = td.replace('pino-http', require('../mock/npm/pino-http.mock').initMock()).default;
 		redirectToHTTPS = td.replace('express-http-to-https', require('../mock/npm/express-http-to-https.mock').initMock()).redirectToHTTPS;
 		renderErrorPage = td.replace('@rowanmanning/render-error-page', require('../mock/npm/@rowanmanning/render-error-page.mock').initMock());
 

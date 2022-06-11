@@ -9,5 +9,5 @@ exports.initMock = () => {
 		error: td.func('pino logger.error')
 	};
 	td.when(pino(), {ignoreExtraArgs: true}).thenReturn(pino.mockLogger);
-	return pino;
+	return {default: pino};
 };
