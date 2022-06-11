@@ -1,5 +1,29 @@
 # Changelog
 
+## [2.5.0](https://github.com/rowanmanning/express-config/compare/v2.4.1...v2.5.0) (2022-06-11)
+
+
+### Features
+
+* ensure typescript types are always valid ([f3bb57c](https://github.com/rowanmanning/express-config/commit/f3bb57cfdff750ccfecf3d2cb8917894d2c820c7))
+
+
+### Bug Fixes
+
+* remove a deprecated pino-http configuration ([5bf0c82](https://github.com/rowanmanning/express-config/commit/5bf0c82007af58147a76503635abff8eb453bf17))
+
+
+### Miscellaneous
+
+* bump @commitlint/cli from 17.0.1 to 17.0.2 ([1f994af](https://github.com/rowanmanning/express-config/commit/1f994af6faf5269b3b28b5d8dfda0a895881f288))
+* bump @commitlint/config-conventional from 17.0.0 to 17.0.2 ([8609113](https://github.com/rowanmanning/express-config/commit/860911358c6b0c930c8776e0d4b68a0121f7017c))
+* bump @rowanmanning/eslint-config ([990a5a5](https://github.com/rowanmanning/express-config/commit/990a5a5d49d301d32bf36c6694dc9b1c8b980680))
+* bump @rowanmanning/not-found from 3.0.3 to 3.1.0 ([8400282](https://github.com/rowanmanning/express-config/commit/84002829119fa0e250d4a22b6535c82ff709fe89))
+* bump @rowanmanning/render-error-page from 3.0.1 to 3.1.0 ([b644812](https://github.com/rowanmanning/express-config/commit/b644812ca887094d1050e471de9823db18dac5fa))
+* bump eslint from 8.16.0 to 8.17.0 ([05b6ab6](https://github.com/rowanmanning/express-config/commit/05b6ab68829c3b0b2f592b7cb11e3b9fcbdf6791))
+* bump pino from 7.11.0 to 8.0.0 ([#54](https://github.com/rowanmanning/express-config/issues/54)) ([556a80b](https://github.com/rowanmanning/express-config/commit/556a80bec0626287798637675baa728415b5c19e))
+* fix eslint issues ([9e71b74](https://github.com/rowanmanning/express-config/commit/9e71b7411e58e4cfac45b1dc99bc41515e711859))
+
 ### [2.4.1](https://github.com/rowanmanning/express-config/compare/v2.4.0...v2.4.1) (2022-05-26)
 
 
