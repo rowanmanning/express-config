@@ -707,11 +707,14 @@ describe('lib/express-config', () => {
 		describe('.pinoHttp', () => {
 
 			it('contains default values for Pino HTTP autologging', () => {
-				assert.deepEqual(configureExpress.defaultOptions.pinoHttp.autoLogging, {
-					ignorePaths: [
-						'/favicon.ico'
-					]
-				});
+				const autoLogging = configureExpress.defaultOptions.pinoHttp.autoLogging;
+				assert.deepEqual(Object.keys(autoLogging), ['ignore']);
+				assert.isFunction(autoLogging.ignore);
+				assert.isFalse(autoLogging.ignore({}));
+				assert.isFalse(autoLogging.ignore({url: '/mock-path'}));
+				assert.isFalse(autoLogging.ignore({url: '/'}));
+				assert.isTrue(autoLogging.ignore({url: '/favicon.ico'}));
+				assert.isTrue(autoLogging.ignore({url: '/favicon.ico?mock-query=true'}));
 			});
 
 			it('contains default values for Pino HTTP request ID generation', () => {
