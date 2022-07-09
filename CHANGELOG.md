@@ -1,5 +1,27 @@
 # Changelog
 
+## [2.6.0](https://github.com/rowanmanning/express-config/compare/v2.5.0...v2.6.0) (2022-07-09)
+
+
+### Features
+
+* bump pino-http from 7.1.0 to 8.1.0 ([4147d0f](https://github.com/rowanmanning/express-config/commit/4147d0f097521f312b2092cbe388340de80f291f))
+
+
+### Bug Fixes
+
+* bump pino-http from 8.1.0 to 8.1.1 ([9b0e8d5](https://github.com/rowanmanning/express-config/commit/9b0e8d51b64ce337586aa96362405004d25693db))
+
+
+### Miscellaneous
+
+* bump @commitlint/cli from 17.0.2 to 17.0.3 ([0eaceb5](https://github.com/rowanmanning/express-config/commit/0eaceb5f63be32356a29a79c2a6f8169802581f5))
+* bump @commitlint/config-conventional from 17.0.2 to 17.0.3 ([be2f093](https://github.com/rowanmanning/express-config/commit/be2f093626bac7667007914c03251f6a362c3152))
+* bump eslint from 8.17.0 to 8.19.0 ([518050e](https://github.com/rowanmanning/express-config/commit/518050e4f92c0b90a49bfd89d947a05f35f8cd39))
+* bump pino from 8.0.0 to 8.1.0 ([cfb14a7](https://github.com/rowanmanning/express-config/commit/cfb14a7ee226bbbcb6702932f3acc2bc271cfabd))
+* bump testdouble from 3.16.5 to 3.16.6 ([e69f66b](https://github.com/rowanmanning/express-config/commit/e69f66b181ddd9948acb77551c0331900d828e20))
+* bump typescript from 4.7.3 to 4.7.4 ([d780eec](https://github.com/rowanmanning/express-config/commit/d780eec5859e37cc21355fad8330fe0f93c12454))
+
 ## [2.5.0](https://github.com/rowanmanning/express-config/compare/v2.4.1...v2.5.0) (2022-06-11)
 
 
