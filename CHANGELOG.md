@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.6.1](https://github.com/rowanmanning/express-config/compare/v2.6.0...v2.6.1) (2022-07-09)
+
+
+### Bug Fixes
+
+* hide the misc changelog section ([016ad9e](https://github.com/rowanmanning/express-config/commit/016ad9ed44344d75453aac318e5a010aaa0b7228))
+
 ## [2.6.0](https://github.com/rowanmanning/express-config/compare/v2.5.0...v2.6.0) (2022-07-09)
 
 
