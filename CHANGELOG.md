@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.6.2](https://github.com/rowanmanning/express-config/compare/v2.6.1...v2.6.2) (2022-07-28)
+
+
+### Bug Fixes
+
+* bump helmet from 5.1.0 to 5.1.1 ([da7e61f](https://github.com/rowanmanning/express-config/commit/da7e61fb6bc78255dae50fded02a581f464417e0))
+* bump pino from 8.1.0 to 8.2.0 ([311ca85](https://github.com/rowanmanning/express-config/commit/311ca85d1ecc61230583aff5a9de8f4ab069001c))
+* bump pino from 8.2.0 to 8.3.0 ([25a04c8](https://github.com/rowanmanning/express-config/commit/25a04c85cb8aabbdf4af3c40be6b202b3b9a7997))
+* bump pino from 8.3.0 to 8.3.1 ([f6eb567](https://github.com/rowanmanning/express-config/commit/f6eb567ea5228af7ce25a8afd8b104f0d6d431bc))
+
 ## [2.6.1](https://github.com/rowanmanning/express-config/compare/v2.6.0...v2.6.1) (2022-07-09)
 
 
