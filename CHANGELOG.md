@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.6.3](https://github.com/rowanmanning/express-config/compare/v2.6.2...v2.6.3) (2022-08-02)
+
+
+### Bug Fixes
+
+* bump pino-http from 8.1.1 to 8.2.0 ([dcec15d](https://github.com/rowanmanning/express-config/commit/dcec15d61f4a63ef51ee486d13c404fe61e364fd))
+
 ## [2.6.2](https://github.com/rowanmanning/express-config/compare/v2.6.1...v2.6.2) (2022-07-28)
 
 
