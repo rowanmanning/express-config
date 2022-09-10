@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.7.0](https://github.com/rowanmanning/express-config/compare/v2.6.4...v2.7.0) (2022-09-10)
+
+
+### Features
+
+* bump pino from 8.4.2 to 8.5.0 ([975e719](https://github.com/rowanmanning/express-config/commit/975e7190f5b1a7797cd8ac0b8d7ea8ad9db60874))
+
+
+### Bug Fixes
+
+* bump pino from 8.4.1 to 8.4.2 ([8488d3d](https://github.com/rowanmanning/express-config/commit/8488d3d241b6995cc7c02267e6b98ef59e7a1361))
+
 ## [2.6.4](https://github.com/rowanmanning/express-config/compare/v2.6.3...v2.6.4) (2022-08-15)
 
 
