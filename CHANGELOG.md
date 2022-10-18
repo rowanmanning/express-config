@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.8.2](https://github.com/rowanmanning/express-config/compare/v2.8.1...v2.8.2) (2022-10-18)
+
+
+### Bug Fixes
+
+* bump express from 4.18.1 to 4.18.2 ([368d96d](https://github.com/rowanmanning/express-config/commit/368d96d0098d12fda0e9bcbc48af2e47ab557e0a))
+
 ## [2.8.1](https://github.com/rowanmanning/express-config/compare/v2.8.0...v2.8.1) (2022-10-04)
 
 
