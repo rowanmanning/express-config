@@ -888,4 +888,10 @@ describe('lib/express-config', () => {
 
 	});
 
+	describe('.default', () => {
+		it('aliases the module exports', () => {
+			assert.strictEqual(configureExpress, configureExpress.default);
+		});
+	});
+
 });
