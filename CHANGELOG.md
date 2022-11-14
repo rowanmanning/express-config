@@ -1,5 +1,14 @@
 # Changelog
 
+## [2.8.4](https://github.com/rowanmanning/express-config/compare/v2.8.3...v2.8.4) (2022-11-14)
+
+
+### Bug Fixes
+
+* bump @rowanmanning/not-found from 3.1.1 to 3.1.2 ([4f26c87](https://github.com/rowanmanning/express-config/commit/4f26c87e3369ac17f74f47df4ae421e3927efb20))
+* bump @rowanmanning/render-error-page from 3.1.1 to 3.1.2 ([bbff41b](https://github.com/rowanmanning/express-config/commit/bbff41b8d8d2a6a8c684096e029cf5e8ea0f0dda))
+* improve TypeScript compatibility ([fd099aa](https://github.com/rowanmanning/express-config/commit/fd099aa7285c405f3e23e6779a159aba31ddf499))
+
 ## [2.8.3](https://github.com/rowanmanning/express-config/compare/v2.8.2...v2.8.3) (2022-10-26)
 
 
