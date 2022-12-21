@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.8.5](https://github.com/rowanmanning/express-config/compare/v2.8.4...v2.8.5) (2022-12-21)
+
+
+### Bug Fixes
+
+* bump helmet from 6.0.0 to 6.0.1 ([ff33e4c](https://github.com/rowanmanning/express-config/commit/ff33e4cd384a9a589a9249dc39e439fb9a20dee8))
+
 ## [2.8.4](https://github.com/rowanmanning/express-config/compare/v2.8.3...v2.8.4) (2022-11-14)
 
 
