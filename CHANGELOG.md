@@ -1,5 +1,14 @@
 # Changelog
 
+## [2.8.6](https://github.com/rowanmanning/express-config/compare/v2.8.5...v2.8.6) (2023-01-08)
+
+
+### Bug Fixes
+
+* bump @rowanmanning/not-found from 3.1.2 to 3.1.3 ([ee1a3b5](https://github.com/rowanmanning/express-config/commit/ee1a3b5aceb0a0bf18860b928b60f34e3e3d9870))
+* bump pino from 8.7.0 to 8.8.0 ([9543068](https://github.com/rowanmanning/express-config/commit/9543068ecdb4b881f12240c5846c811c570dcf40))
+* bump pino-http from 8.2.1 to 8.3.1 ([9d86f47](https://github.com/rowanmanning/express-config/commit/9d86f47095096da4c8586af17c0b4a70468cb3c5))
+
 ## [2.8.5](https://github.com/rowanmanning/express-config/compare/v2.8.4...v2.8.5) (2022-12-21)
 
 
