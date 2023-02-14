@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.8.10](https://github.com/rowanmanning/express-config/compare/v2.8.9...v2.8.10) (2023-02-14)
+
+
+### Bug Fixes
+
+* bump @rowanmanning/not-found from 3.1.3 to 3.1.4 ([a8f357d](https://github.com/rowanmanning/express-config/commit/a8f357d4968ac09ada1f0bdd4cf0816ca79827de))
+* support npm v9 ([15efcc3](https://github.com/rowanmanning/express-config/commit/15efcc3ef36076b14f0ba861dd3e7c99b636630a))
+
 ## [2.8.9](https://github.com/rowanmanning/express-config/compare/v2.8.8...v2.8.9) (2023-02-14)
 
 
