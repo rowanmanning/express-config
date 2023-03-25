@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.8.11](https://github.com/rowanmanning/express-config/compare/v2.8.10...v2.8.11) (2023-03-25)
+
+
+### Bug Fixes
+
+* bump @rowanmanning/render-error-page from 3.1.2 to 4.1.3 ([2305cd7](https://github.com/rowanmanning/express-config/commit/2305cd7131b5faeabbb00634563a3cbe12df46e3))
+* bump pino from 8.10.0 to 8.11.0 ([838d717](https://github.com/rowanmanning/express-config/commit/838d717c37773cb95a87869ab6c174b6130f8e47))
+
 ## [2.8.10](https://github.com/rowanmanning/express-config/compare/v2.8.9...v2.8.10) (2023-02-14)
 
 
