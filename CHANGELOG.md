@@ -1,5 +1,23 @@
 # Changelog
 
+## [3.0.0](https://github.com/rowanmanning/express-config/compare/v2.8.11...v3.0.0) (2023-03-25)
+
+
+### ⚠ BREAKING CHANGES
+
+* drop official support for npm v7
+* drop support for Node.js 14
+
+### Bug Fixes
+
+* bump @rowanmanning/not-found from 3.1.4 to 4.0.0 ([ddb9682](https://github.com/rowanmanning/express-config/commit/ddb9682d7e03abd1afa2e60b4b534ef7a848d58a))
+
+
+### Miscellaneous
+
+* drop official support for npm v7 ([8d65a3e](https://github.com/rowanmanning/express-config/commit/8d65a3e41a9e6ef232a31a1bba99663592e1ac93))
+* drop support for Node.js 14 ([b8a415e](https://github.com/rowanmanning/express-config/commit/b8a415e3d028e3ce67b5b7bebb0ec7086ad81295))
+
 ## [2.8.11](https://github.com/rowanmanning/express-config/compare/v2.8.10...v2.8.11) (2023-03-25)
 
 
