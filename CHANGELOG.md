@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.0.1](https://github.com/rowanmanning/express-config/compare/v3.0.0...v3.0.1) (2023-04-18)
+
+
+### Bug Fixes
+
+* bump helmet from 6.0.1 to 6.1.5 ([8061e30](https://github.com/rowanmanning/express-config/commit/8061e30d3693fd2f123fde7ed6750bab893e3ada))
+* bump nanoid from 3.3.4 to 3.3.6 ([4b1c018](https://github.com/rowanmanning/express-config/commit/4b1c018254d922c106c8c74841b5e77e9018550d))
+
 ## [3.0.0](https://github.com/rowanmanning/express-config/compare/v2.8.11...v3.0.0) (2023-03-25)
 
 
