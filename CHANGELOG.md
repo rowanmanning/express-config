@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.0.2](https://github.com/rowanmanning/express-config/compare/v3.0.1...v3.0.2) (2023-04-18)
+
+
+### Bug Fixes
+
+* add support for Node.js 20 ([2a49755](https://github.com/rowanmanning/express-config/commit/2a497559fb224cd01a0ab8ddb1c3711e48909949))
+* bump @rowanmanning/not-found from 4.0.0 to 4.0.1 ([4bae46e](https://github.com/rowanmanning/express-config/commit/4bae46e7ed5787ff0a6936fb20c2417ccde19091))
+
 ## [3.0.1](https://github.com/rowanmanning/express-config/compare/v3.0.0...v3.0.1) (2023-04-18)
 
 
