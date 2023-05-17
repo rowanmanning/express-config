@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.3](https://github.com/rowanmanning/express-config/compare/v3.0.2...v3.0.3) (2023-05-17)
+
+
+### Bug Fixes
+
+* bump pino from 8.11.0 to 8.14.1 ([a52b0a8](https://github.com/rowanmanning/express-config/commit/a52b0a869231d573b0882ce0edacffc204a40ed2))
+
 ## [3.0.2](https://github.com/rowanmanning/express-config/compare/v3.0.1...v3.0.2) (2023-04-18)
 
 
