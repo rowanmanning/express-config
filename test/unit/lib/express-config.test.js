@@ -1,6 +1,6 @@
 'use strict';
 
-const {assert} = require('chai');
+const assert = require('node:assert');
 const td = require('testdouble');
 
 describe('lib/express-config', () => {
@@ -38,7 +38,7 @@ describe('lib/express-config', () => {
 	});
 
 	it('is a function', () => {
-		assert.isFunction(configureExpress);
+		assert.strictEqual(typeof configureExpress, 'function');
 	});
 
 	describe('configureExpress(app, options)', () => {
@@ -205,40 +205,40 @@ describe('lib/express-config', () => {
 		describe('app.preRoute', () => {
 
 			it('is an array of created middleware functions', () => {
-				assert.isArray(app.preRoute);
-				assert.isTrue(app.preRoute.every(middleware => typeof middleware === 'function'));
+				assert.ok(Array.isArray(app.preRoute));
+				assert.strictEqual(app.preRoute.every(middleware => typeof middleware === 'function'), true);
 			});
 
 			it('contains helmet middleware', () => {
-				assert.include(app.preRoute, helmet.mockMiddleware);
+				assert.ok(app.preRoute.includes(helmet.mockMiddleware));
 			});
 
 			it('contains express-http-to-https middleware', () => {
-				assert.include(app.preRoute, redirectToHTTPS.mockMiddleware);
+				assert.ok(app.preRoute.includes(redirectToHTTPS.mockMiddleware));
 			});
 
 			it('contains express.static middleware', () => {
-				assert.include(app.preRoute, express.static.mockMiddleware);
+				assert.ok(app.preRoute.includes(express.static.mockMiddleware));
 			});
 
 			it('contains express.json middleware', () => {
-				assert.include(app.preRoute, express.json.mockMiddleware);
+				assert.ok(app.preRoute.includes(express.json.mockMiddleware));
 			});
 
 			it('contains express.urlencoded middleware', () => {
-				assert.include(app.preRoute, express.urlencoded.mockMiddleware);
+				assert.ok(app.preRoute.includes(express.urlencoded.mockMiddleware));
 			});
 
 			it('contains express-session middleware', () => {
-				assert.include(app.preRoute, expressSession.mockMiddleware);
+				assert.ok(app.preRoute.includes(expressSession.mockMiddleware));
 			});
 
 			it('contains connect-flash middleware', () => {
-				assert.include(app.preRoute, flash.mockMiddleware);
+				assert.ok(app.preRoute.includes(flash.mockMiddleware));
 			});
 
 			it('contains pino-http middleware', () => {
-				assert.include(app.preRoute, pinoHttp.mockMiddleware);
+				assert.ok(app.preRoute.includes(pinoHttp.mockMiddleware));
 			});
 
 		});
@@ -246,16 +246,16 @@ describe('lib/express-config', () => {
 		describe('app.postRoute', () => {
 
 			it('is an array of created middleware functions', () => {
-				assert.isArray(app.postRoute);
-				assert.isTrue(app.postRoute.every(middleware => typeof middleware === 'function'));
+				assert.ok(Array.isArray(app.postRoute));
+				assert.strictEqual(app.postRoute.every(middleware => typeof middleware === 'function'), true);
 			});
 
 			it('contains not-found middleware', () => {
-				assert.include(app.postRoute, notFound.mockMiddleware);
+				assert.ok(app.postRoute.includes(notFound.mockMiddleware));
 			});
 
 			it('contains render-error-page middleware', () => {
-				assert.include(app.postRoute, renderErrorPage.mockMiddleware);
+				assert.ok(app.postRoute.includes(renderErrorPage.mockMiddleware));
 			});
 
 		});
@@ -358,7 +358,7 @@ describe('lib/express-config', () => {
 			describe('app.preRoute', () => {
 
 				it('does not contain helmet middleware', () => {
-					assert.notInclude(app.preRoute, helmet.mockMiddleware);
+					assert.strictEqual(app.preRoute.includes(helmet.mockMiddleware), false);
 				});
 
 			});
@@ -375,7 +375,7 @@ describe('lib/express-config', () => {
 			describe('app.preRoute', () => {
 
 				it('does not contain express-http-to-https middleware', () => {
-					assert.notInclude(app.preRoute, redirectToHTTPS.mockMiddleware);
+					assert.strictEqual(app.preRoute.includes(redirectToHTTPS.mockMiddleware), false);
 				});
 
 			});
@@ -392,7 +392,7 @@ describe('lib/express-config', () => {
 			describe('app.preRoute', () => {
 
 				it('does not contain express.static middleware', () => {
-					assert.notInclude(app.preRoute, express.static.mockMiddleware);
+					assert.strictEqual(app.preRoute.includes(express.static.mockMiddleware), false);
 				});
 
 			});
@@ -409,7 +409,7 @@ describe('lib/express-config', () => {
 			describe('app.preRoute', () => {
 
 				it('does not contain express.json middleware', () => {
-					assert.notInclude(app.preRoute, express.json.mockMiddleware);
+					assert.strictEqual(app.preRoute.includes(express.json.mockMiddleware), false);
 				});
 
 			});
@@ -426,7 +426,7 @@ describe('lib/express-config', () => {
 			describe('app.preRoute', () => {
 
 				it('does not contain express.urlencoded middleware', () => {
-					assert.notInclude(app.preRoute, express.urlencoded.mockMiddleware);
+					assert.strictEqual(app.preRoute.includes(express.urlencoded.mockMiddleware), false);
 				});
 
 			});
@@ -443,7 +443,7 @@ describe('lib/express-config', () => {
 			describe('app.preRoute', () => {
 
 				it('does not contain pino-http middleware', () => {
-					assert.notInclude(app.preRoute, pinoHttp.mockMiddleware);
+					assert.strictEqual(app.preRoute.includes(pinoHttp.mockMiddleware), false);
 				});
 
 			});
@@ -460,11 +460,11 @@ describe('lib/express-config', () => {
 			describe('app.postRoute', () => {
 
 				it('does not contain express-session middleware', () => {
-					assert.notInclude(app.postRoute, expressSession.mockMiddleware);
+					assert.strictEqual(app.postRoute.includes(expressSession.mockMiddleware), false);
 				});
 
 				it('contains connect-flash middleware', () => {
-					assert.notInclude(app.preRoute, flash.mockMiddleware);
+					assert.strictEqual(app.preRoute.includes(flash.mockMiddleware), false);
 				});
 
 			});
@@ -506,7 +506,7 @@ describe('lib/express-config', () => {
 			describe('app.postRoute', () => {
 
 				it('does not contain not-found middleware', () => {
-					assert.notInclude(app.postRoute, helmet.mockMiddleware);
+					assert.strictEqual(app.postRoute.includes(helmet.mockMiddleware), false);
 				});
 
 			});
@@ -523,7 +523,7 @@ describe('lib/express-config', () => {
 			describe('app.postRoute', () => {
 
 				it('does not contain render-error-page middleware', () => {
-					assert.notInclude(app.postRoute, renderErrorPage.mockMiddleware);
+					assert.strictEqual(app.postRoute.includes(renderErrorPage.mockMiddleware), false);
 				});
 
 			});
@@ -535,9 +535,9 @@ describe('lib/express-config', () => {
 	describe('configureExpress.pinoSerializers', () => {
 
 		it('contains serializers for requests and responses', () => {
-			assert.isObject(configureExpress.pinoSerializers);
-			assert.isFunction(configureExpress.pinoSerializers.request);
-			assert.isFunction(configureExpress.pinoSerializers.response);
+			assert.strictEqual(typeof configureExpress.pinoSerializers, 'object');
+			assert.strictEqual(typeof configureExpress.pinoSerializers.request, 'function');
+			assert.strictEqual(typeof configureExpress.pinoSerializers.response, 'function');
 		});
 
 		describe('.request(request)', () => {
@@ -550,7 +550,7 @@ describe('lib/express-config', () => {
 					headers: {'mock-header': 'mock-header-value'},
 					query: {'mock-query': 'mock-query-value'}
 				};
-				assert.deepEqual(configureExpress.pinoSerializers.request(mockRequest), {
+				assert.deepStrictEqual(configureExpress.pinoSerializers.request(mockRequest), {
 					id: 'mock-id',
 					method: 'mock-method',
 					url: 'mock-url'
@@ -568,7 +568,7 @@ describe('lib/express-config', () => {
 					hostname: 'mock-hostname',
 					headers: {'mock-header': 'mock-header-value'}
 				};
-				assert.deepEqual(configureExpress.pinoSerializers.response(mockResponse), {
+				assert.deepStrictEqual(configureExpress.pinoSerializers.response(mockResponse), {
 					statusCode: 'mock-status-code'
 				});
 			});
@@ -580,16 +580,16 @@ describe('lib/express-config', () => {
 	describe('configureExpress.defaultOptions', () => {
 
 		it('is an object', () => {
-			assert.isObject(configureExpress.defaultOptions);
+			assert.strictEqual(typeof configureExpress.defaultOptions, 'object');
 		});
 
 		describe('.errorPage', () => {
 
 			it('contains default values for Error Page', () => {
-				assert.isObject(configureExpress.defaultOptions.errorPage);
-				assert.isFunction(configureExpress.defaultOptions.errorPage.errorLogger);
-				assert.isFunction(configureExpress.defaultOptions.errorPage.errorLoggingFilter);
-				assert.isFunction(configureExpress.defaultOptions.errorPage.errorLoggingSerializer);
+				assert.strictEqual(typeof configureExpress.defaultOptions.errorPage, 'object');
+				assert.strictEqual(typeof configureExpress.defaultOptions.errorPage.errorLogger, 'function');
+				assert.strictEqual(typeof configureExpress.defaultOptions.errorPage.errorLoggingFilter, 'function');
+				assert.strictEqual(typeof configureExpress.defaultOptions.errorPage.errorLoggingSerializer, 'function');
 			});
 
 			describe('.errorLogger(error, request)', () => {
@@ -613,7 +613,7 @@ describe('lib/express-config', () => {
 
 					it('returns `true`', () => {
 						const error = new Error('mock error');
-						assert.isTrue(configureExpress.defaultOptions.errorPage.errorLoggingFilter(error));
+						assert.strictEqual(configureExpress.defaultOptions.errorPage.errorLoggingFilter(error), true);
 					});
 
 				});
@@ -623,7 +623,7 @@ describe('lib/express-config', () => {
 					it('returns `true`', () => {
 						const error = new Error('mock error');
 						error.statusCode = 200;
-						assert.isTrue(configureExpress.defaultOptions.errorPage.errorLoggingFilter(error));
+						assert.strictEqual(configureExpress.defaultOptions.errorPage.errorLoggingFilter(error), true);
 					});
 
 				});
@@ -633,7 +633,7 @@ describe('lib/express-config', () => {
 					it('returns `true`', () => {
 						const error = new Error('mock error');
 						error.statusCode = 300;
-						assert.isTrue(configureExpress.defaultOptions.errorPage.errorLoggingFilter(error));
+						assert.strictEqual(configureExpress.defaultOptions.errorPage.errorLoggingFilter(error), true);
 					});
 
 				});
@@ -643,7 +643,7 @@ describe('lib/express-config', () => {
 					it('returns `true`', () => {
 						const error = new Error('mock error');
 						error.statusCode = 400;
-						assert.isTrue(configureExpress.defaultOptions.errorPage.errorLoggingFilter(error));
+						assert.strictEqual(configureExpress.defaultOptions.errorPage.errorLoggingFilter(error), true);
 					});
 
 				});
@@ -653,7 +653,7 @@ describe('lib/express-config', () => {
 					it('returns `true`', () => {
 						const error = new Error('mock error');
 						error.statusCode = 500;
-						assert.isTrue(configureExpress.defaultOptions.errorPage.errorLoggingFilter(error));
+						assert.strictEqual(configureExpress.defaultOptions.errorPage.errorLoggingFilter(error), true);
 					});
 
 				});
@@ -663,7 +663,7 @@ describe('lib/express-config', () => {
 					it('returns `false`', () => {
 						const error = new Error('mock error');
 						error.statusCode = 404;
-						assert.isFalse(configureExpress.defaultOptions.errorPage.errorLoggingFilter(error));
+						assert.strictEqual(configureExpress.defaultOptions.errorPage.errorLoggingFilter(error), false);
 					});
 
 				});
@@ -674,7 +674,7 @@ describe('lib/express-config', () => {
 
 				it('returns the error wrapped in an object', () => {
 					const error = new Error('mock error');
-					assert.deepEqual(
+					assert.deepStrictEqual(
 						configureExpress.defaultOptions.errorPage.errorLoggingSerializer(error),
 						{error}
 					);
@@ -687,7 +687,7 @@ describe('lib/express-config', () => {
 		describe('.expressPreact', () => {
 
 			it('contains default values for Express Preact', () => {
-				assert.deepEqual(configureExpress.defaultOptions.expressPreact, {
+				assert.deepStrictEqual(configureExpress.defaultOptions.expressPreact, {
 					beautify: true
 				});
 			});
@@ -697,7 +697,7 @@ describe('lib/express-config', () => {
 		describe('.jsonBody', () => {
 
 			it('contains default values for Express JSON Body', () => {
-				assert.deepEqual(configureExpress.defaultOptions.jsonBody, {
+				assert.deepStrictEqual(configureExpress.defaultOptions.jsonBody, {
 					strict: false
 				});
 			});
@@ -708,17 +708,17 @@ describe('lib/express-config', () => {
 
 			it('contains default values for Pino HTTP autologging', () => {
 				const autoLogging = configureExpress.defaultOptions.pinoHttp.autoLogging;
-				assert.deepEqual(Object.keys(autoLogging), ['ignore']);
-				assert.isFunction(autoLogging.ignore);
-				assert.isFalse(autoLogging.ignore({}));
-				assert.isFalse(autoLogging.ignore({url: '/mock-path'}));
-				assert.isFalse(autoLogging.ignore({url: '/'}));
-				assert.isTrue(autoLogging.ignore({url: '/favicon.ico'}));
-				assert.isTrue(autoLogging.ignore({url: '/favicon.ico?mock-query=true'}));
+				assert.deepStrictEqual(Object.keys(autoLogging), ['ignore']);
+				assert.strictEqual(typeof autoLogging.ignore, 'function');
+				assert.strictEqual(autoLogging.ignore({}), false);
+				assert.strictEqual(autoLogging.ignore({url: '/mock-path'}), false);
+				assert.strictEqual(autoLogging.ignore({url: '/'}), false);
+				assert.strictEqual(autoLogging.ignore({url: '/favicon.ico'}), true);
+				assert.strictEqual(autoLogging.ignore({url: '/favicon.ico?mock-query=true'}), true);
 			});
 
 			it('contains default values for Pino HTTP request ID generation', () => {
-				assert.isFunction(configureExpress.defaultOptions.pinoHttp.genReqId);
+				assert.strictEqual(typeof configureExpress.defaultOptions.pinoHttp.genReqId, 'function');
 			});
 
 			describe('.genReqId(request)', () => {
@@ -764,7 +764,7 @@ describe('lib/express-config', () => {
 			});
 
 			it('contains default values for Pino HTTP custom attribute keys', () => {
-				assert.deepEqual(configureExpress.defaultOptions.pinoHttp.customAttributeKeys, {
+				assert.deepStrictEqual(configureExpress.defaultOptions.pinoHttp.customAttributeKeys, {
 					req: 'request', // eslint-disable-line id-denylist
 					res: 'response', // eslint-disable-line id-denylist
 					err: 'error' // eslint-disable-line id-denylist
@@ -772,7 +772,7 @@ describe('lib/express-config', () => {
 			});
 
 			it('contains default values for Pino HTTP serializers', () => {
-				assert.deepEqual(configureExpress.defaultOptions.pinoHttp.serializers, {
+				assert.deepStrictEqual(configureExpress.defaultOptions.pinoHttp.serializers, {
 					req: configureExpress.pinoSerializers.request, // eslint-disable-line id-denylist
 					res: configureExpress.pinoSerializers.response // eslint-disable-line id-denylist
 				});
@@ -783,7 +783,7 @@ describe('lib/express-config', () => {
 		describe('.publicPath', () => {
 
 			it('contains default values for the public path', () => {
-				assert.deepEqual(configureExpress.defaultOptions.publicPath, `${process.cwd()}/public`);
+				assert.deepStrictEqual(configureExpress.defaultOptions.publicPath, `${process.cwd()}/public`);
 			});
 
 		});
@@ -791,7 +791,7 @@ describe('lib/express-config', () => {
 		describe('.redirectToHttps', () => {
 
 			it('contains default values for Redirect to HTTPS', () => {
-				assert.deepEqual(configureExpress.defaultOptions.redirectToHttps, {
+				assert.deepStrictEqual(configureExpress.defaultOptions.redirectToHttps, {
 					ignoreHosts: [/^localhost:\d+$/i]
 				});
 			});
@@ -801,7 +801,7 @@ describe('lib/express-config', () => {
 		describe('.session', () => {
 
 			it('contains default values for Express Session', () => {
-				assert.deepEqual(configureExpress.defaultOptions.session, {
+				assert.deepStrictEqual(configureExpress.defaultOptions.session, {
 					cookie: {
 						maxAge: 604800000,
 						sameSite: 'strict',
@@ -825,7 +825,7 @@ describe('lib/express-config', () => {
 		describe('.static', () => {
 
 			it('contains default values for Express Static', () => {
-				assert.deepEqual(configureExpress.defaultOptions.static, {
+				assert.deepStrictEqual(configureExpress.defaultOptions.static, {
 					maxAge: 0
 				});
 			});
@@ -843,7 +843,7 @@ describe('lib/express-config', () => {
 		describe('.urlencodedBody', () => {
 
 			it('contains default values for Express Urlencoded body', () => {
-				assert.deepEqual(configureExpress.defaultOptions.urlencodedBody, {
+				assert.deepStrictEqual(configureExpress.defaultOptions.urlencodedBody, {
 					extended: false
 				});
 			});
@@ -853,7 +853,7 @@ describe('lib/express-config', () => {
 		describe('.viewPath', () => {
 
 			it('contains default values for the view path', () => {
-				assert.deepEqual(configureExpress.defaultOptions.viewPath, `${process.cwd()}/views`);
+				assert.deepStrictEqual(configureExpress.defaultOptions.viewPath, `${process.cwd()}/views`);
 			});
 
 		});
@@ -869,7 +869,7 @@ describe('lib/express-config', () => {
 			describe('.session.cookie.secure', () => {
 
 				it('is set to `true`', () => {
-					assert.isTrue(configureExpress.defaultOptions.session.cookie.secure);
+					assert.strictEqual(configureExpress.defaultOptions.session.cookie.secure, true);
 				});
 
 			});
@@ -877,7 +877,7 @@ describe('lib/express-config', () => {
 			describe('.static.maxAge', () => {
 
 				it('is set to a week', () => {
-					assert.deepEqual(configureExpress.defaultOptions.static, {
+					assert.deepStrictEqual(configureExpress.defaultOptions.static, {
 						maxAge: 604800000
 					});
 				});
