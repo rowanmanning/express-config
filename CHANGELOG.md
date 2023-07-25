@@ -3,75 +3,9 @@
 ## 3.0.5 (2023-07-25)
 
 
-### ⚠ BREAKING CHANGES
-
-* drop official support for npm v7
-* drop support for Node.js 14
-
-### Features
-
-* bump helmet from 5.0.2 to 5.1.0 ([a60e806](https://github.com/rowanmanning/express-config/commit/a60e806783c942bc2323133aca2436559f46df79))
-* bump helmet from 5.1.1 to 6.0.0 ([7ba01f2](https://github.com/rowanmanning/express-config/commit/7ba01f20803e161c27e7ea2dc7ece1ee3148ea41))
-* bump pino from 8.4.2 to 8.5.0 ([975e719](https://github.com/rowanmanning/express-config/commit/975e7190f5b1a7797cd8ac0b8d7ea8ad9db60874))
-* bump pino-http from 7.1.0 to 8.1.0 ([4147d0f](https://github.com/rowanmanning/express-config/commit/4147d0f097521f312b2092cbe388340de80f291f))
-* ensure typescript types are always valid ([f3bb57c](https://github.com/rowanmanning/express-config/commit/f3bb57cfdff750ccfecf3d2cb8917894d2c820c7))
-* use the x-request-id header when present ([d18eea2](https://github.com/rowanmanning/express-config/commit/d18eea29c01770e101314c2cc0b26ac75a927b8f))
-
-
 ### Bug Fixes
 
-* add support for Node.js 20 ([2a49755](https://github.com/rowanmanning/express-config/commit/2a497559fb224cd01a0ab8ddb1c3711e48909949))
-* bump @rowanmanning/not-found from 2.1.0 to 3.0.2 ([91d45a2](https://github.com/rowanmanning/express-config/commit/91d45a22b73704da8b8c6eeac1cb40bd022f5bcd))
-* bump @rowanmanning/not-found from 3.0.2 to 3.0.3 ([95f147f](https://github.com/rowanmanning/express-config/commit/95f147fd24e544f681f6ddcb45db77ed8cef6256))
-* bump @rowanmanning/not-found from 3.1.1 to 3.1.2 ([4f26c87](https://github.com/rowanmanning/express-config/commit/4f26c87e3369ac17f74f47df4ae421e3927efb20))
-* bump @rowanmanning/not-found from 3.1.2 to 3.1.3 ([ee1a3b5](https://github.com/rowanmanning/express-config/commit/ee1a3b5aceb0a0bf18860b928b60f34e3e3d9870))
-* bump @rowanmanning/not-found from 3.1.3 to 3.1.4 ([a8f357d](https://github.com/rowanmanning/express-config/commit/a8f357d4968ac09ada1f0bdd4cf0816ca79827de))
-* bump @rowanmanning/not-found from 3.1.4 to 4.0.0 ([ddb9682](https://github.com/rowanmanning/express-config/commit/ddb9682d7e03abd1afa2e60b4b534ef7a848d58a))
-* bump @rowanmanning/not-found from 4.0.0 to 4.0.1 ([4bae46e](https://github.com/rowanmanning/express-config/commit/4bae46e7ed5787ff0a6936fb20c2417ccde19091))
-* bump @rowanmanning/render-error-page from 3.0.0 to 3.0.1 ([c6d77cc](https://github.com/rowanmanning/express-config/commit/c6d77cc9dd7dbf70031f9ae86931fe8fc5e18382))
-* bump @rowanmanning/render-error-page from 3.1.1 to 3.1.2 ([bbff41b](https://github.com/rowanmanning/express-config/commit/bbff41b8d8d2a6a8c684096e029cf5e8ea0f0dda))
-* bump @rowanmanning/render-error-page from 3.1.2 to 4.1.3 ([2305cd7](https://github.com/rowanmanning/express-config/commit/2305cd7131b5faeabbb00634563a3cbe12df46e3))
-* bump express from 4.18.0 to 4.18.1 ([f30a232](https://github.com/rowanmanning/express-config/commit/f30a2320d3453cbb40bc7e92cb355da1c3351923))
-* bump express from 4.18.1 to 4.18.2 ([368d96d](https://github.com/rowanmanning/express-config/commit/368d96d0098d12fda0e9bcbc48af2e47ab557e0a))
-* bump express-session from 1.17.2 to 1.17.3 ([b99c552](https://github.com/rowanmanning/express-config/commit/b99c5522f483f6558eea8ccba786fed994e52631))
-* bump helmet from 5.1.0 to 5.1.1 ([da7e61f](https://github.com/rowanmanning/express-config/commit/da7e61fb6bc78255dae50fded02a581f464417e0))
-* bump helmet from 6.0.0 to 6.0.1 ([ff33e4c](https://github.com/rowanmanning/express-config/commit/ff33e4cd384a9a589a9249dc39e439fb9a20dee8))
-* bump helmet from 6.0.1 to 6.1.5 ([8061e30](https://github.com/rowanmanning/express-config/commit/8061e30d3693fd2f123fde7ed6750bab893e3ada))
-* bump nanoid from 3.3.4 to 3.3.6 ([4b1c018](https://github.com/rowanmanning/express-config/commit/4b1c018254d922c106c8c74841b5e77e9018550d))
-* bump pino from 8.1.0 to 8.2.0 ([311ca85](https://github.com/rowanmanning/express-config/commit/311ca85d1ecc61230583aff5a9de8f4ab069001c))
-* bump pino from 8.10.0 to 8.11.0 ([838d717](https://github.com/rowanmanning/express-config/commit/838d717c37773cb95a87869ab6c174b6130f8e47))
-* bump pino from 8.11.0 to 8.14.1 ([a52b0a8](https://github.com/rowanmanning/express-config/commit/a52b0a869231d573b0882ce0edacffc204a40ed2))
-* bump pino from 8.2.0 to 8.3.0 ([25a04c8](https://github.com/rowanmanning/express-config/commit/25a04c85cb8aabbdf4af3c40be6b202b3b9a7997))
-* bump pino from 8.3.0 to 8.3.1 ([f6eb567](https://github.com/rowanmanning/express-config/commit/f6eb567ea5228af7ce25a8afd8b104f0d6d431bc))
-* bump pino from 8.3.1 to 8.4.0 ([af089b8](https://github.com/rowanmanning/express-config/commit/af089b80bd269d9be3e0e22aa4f95d50a2131ae3))
-* bump pino from 8.4.0 to 8.4.1 ([7eaecbd](https://github.com/rowanmanning/express-config/commit/7eaecbd3319c620c135edcfcda5a5dad03b3202d))
-* bump pino from 8.4.1 to 8.4.2 ([8488d3d](https://github.com/rowanmanning/express-config/commit/8488d3d241b6995cc7c02267e6b98ef59e7a1361))
-* bump pino from 8.5.0 to 8.6.0 ([239990e](https://github.com/rowanmanning/express-config/commit/239990ebff48f7266f70a1df1e3afc5095126092))
-* bump pino from 8.6.0 to 8.6.1 ([da27b1c](https://github.com/rowanmanning/express-config/commit/da27b1c80a035fc7dec108543d3db298d6cf6081))
-* bump pino from 8.6.1 to 8.7.0 ([e653f53](https://github.com/rowanmanning/express-config/commit/e653f53445330171e8f09661373ba2ac367d4588))
-* bump pino from 8.7.0 to 8.8.0 ([9543068](https://github.com/rowanmanning/express-config/commit/9543068ecdb4b881f12240c5846c811c570dcf40))
-* bump pino from 8.8.0 to 8.9.0 ([5e35aa7](https://github.com/rowanmanning/express-config/commit/5e35aa77980b0a2cde93c6b4b0ad6539740825e2))
-* bump pino from 8.9.0 to 8.10.0 ([1bee50d](https://github.com/rowanmanning/express-config/commit/1bee50d3187fd1d22a752cf7aa14a59bbc7c1700))
-* bump pino-http from 6.6.0 to 7.0.0 ([878fc40](https://github.com/rowanmanning/express-config/commit/878fc40698fe259f069ab80e09299d6a7fa803dc))
-* bump pino-http from 8.1.0 to 8.1.1 ([9b0e8d5](https://github.com/rowanmanning/express-config/commit/9b0e8d51b64ce337586aa96362405004d25693db))
-* bump pino-http from 8.1.1 to 8.2.0 ([dcec15d](https://github.com/rowanmanning/express-config/commit/dcec15d61f4a63ef51ee486d13c404fe61e364fd))
-* bump pino-http from 8.2.0 to 8.2.1 ([e1083d2](https://github.com/rowanmanning/express-config/commit/e1083d231f7b76e20ac796a3375b3cda3108b827))
-* bump pino-http from 8.2.1 to 8.3.1 ([9d86f47](https://github.com/rowanmanning/express-config/commit/9d86f47095096da4c8586af17c0b4a70468cb3c5))
-* bump pino-http from 8.3.1 to 8.3.2 ([0566b21](https://github.com/rowanmanning/express-config/commit/0566b219bb41f95b0db0b9bd41051db94773d911))
-* bump pino-http from 8.3.2 to 8.3.3 ([6854b15](https://github.com/rowanmanning/express-config/commit/6854b15bc2e87936cf490a2362eb1ce82d22ffdc))
-* hide the misc changelog section ([016ad9e](https://github.com/rowanmanning/express-config/commit/016ad9ed44344d75453aac318e5a010aaa0b7228))
-* improve TypeScript compatibility ([fd099aa](https://github.com/rowanmanning/express-config/commit/fd099aa7285c405f3e23e6779a159aba31ddf499))
-* remove a deprecated pino-http configuration ([5bf0c82](https://github.com/rowanmanning/express-config/commit/5bf0c82007af58147a76503635abff8eb453bf17))
-* sort out broken releases ([24e04ec](https://github.com/rowanmanning/express-config/commit/24e04ec18cc29b9710663675b514e7a9d9ae222f))
-* sort out broken releases ([7b960eb](https://github.com/rowanmanning/express-config/commit/7b960eb70470fbd839582cfef0214514850be099))
-* support npm v9 ([15efcc3](https://github.com/rowanmanning/express-config/commit/15efcc3ef36076b14f0ba861dd3e7c99b636630a))
-* use node-prefixed modules ([8c61d54](https://github.com/rowanmanning/express-config/commit/8c61d542f70f7144b38d757898c5ed27b6cbf48b))
-
-
-### Miscellaneous
-
-* drop official support for npm v7 ([8d65a3e](https://github.com/rowanmanning/express-config/commit/8d65a3e41a9e6ef232a31a1bba99663592e1ac93))
-* drop support for Node.js 14 ([b8a415e](https://github.com/rowanmanning/express-config/commit/b8a415e3d028e3ce67b5b7bebb0ec7086ad81295))
+* sort out broken releases
 
 ## [3.0.3](https://github.com/rowanmanning/express-config/compare/v3.0.2...v3.0.3) (2023-05-17)
 
