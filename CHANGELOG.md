@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.6](https://github.com/rowanmanning/express-config/compare/v3.0.5...v3.0.6) (2023-07-25)
+
+
+### Bug Fixes
+
+* bump @rowanmanning/not-found from 4.0.1 to 4.0.3 ([6da3b30](https://github.com/rowanmanning/express-config/commit/6da3b30f09bf9e59991984560f3ebf0a44d0fddf))
+
 ## 3.0.5 (2023-07-25)
 
 
