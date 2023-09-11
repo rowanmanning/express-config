@@ -1,5 +1,16 @@
 # Changelog
 
+## [4.0.0](https://github.com/rowanmanning/express-config/compare/v3.0.7...v4.0.0) (2023-09-11)
+
+
+### ⚠ BREAKING CHANGES
+
+* drop support for Node.js 16
+
+### Miscellaneous
+
+* drop support for Node.js 16 ([15c1dd7](https://github.com/rowanmanning/express-config/commit/15c1dd7d7b60472b05daa112775b6af9e4f0005b))
+
 ## [3.0.7](https://github.com/rowanmanning/express-config/compare/v3.0.6...v3.0.7) (2023-09-11)
 
 
