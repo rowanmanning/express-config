@@ -38,7 +38,7 @@
     "express-http-to-https": "^1.1.4",
     "express-preact-views": "^1.1.0",
     "express-session": "^1.17.2",
-    "helmet": "^6.0.0",
+    "helmet": "^7.1.0",
     "nanoid": "^3.3.1",
     "pino": "^8.0.0",
     "pino-http": "^8.1.0"
