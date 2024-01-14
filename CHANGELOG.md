@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.0.2](https://github.com/rowanmanning/express-config/compare/v4.0.1...v4.0.2) (2024-01-14)
+
+
+### Bug Fixes
+
+* bump pino from 8.16.2 to 8.17.2 ([8382d96](https://github.com/rowanmanning/express-config/commit/8382d9638074c0a2d927bf511fd24196c5ac3612))
+
 ## [4.0.1](https://github.com/rowanmanning/express-config/compare/v4.0.0...v4.0.1) (2023-11-22)
 
 
